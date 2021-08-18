@@ -6,6 +6,7 @@ import "./filmsPage.scss";
 export const FilmsPage = () => {
   const [films, setFilms] = useState([]);
   const [people, setPeople] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchFilms() {
@@ -22,11 +23,8 @@ export const FilmsPage = () => {
 
     fetchFilms();
     fetchPeople();
+    setLoading(false);
   }, []);
 
-  return (
-    <div>
-      <FilmsList films={films} />
-    </div>
-  );
+  return <div>{loading ? <p>Loading...</p> : <FilmsList films={films} />}</div>;
 };

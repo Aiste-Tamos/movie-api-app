@@ -7,7 +7,7 @@ export const FilmsList = ({ films }) => {
   return (
     <div>
       {films.map((film) => {
-        return <FilmCard film={film} />;
+        return <FilmCard film={film} key={film.episode_id} />;
       })}
     </div>
   );
