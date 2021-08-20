@@ -9,10 +9,11 @@ import { Navigation } from "../navigation";
 import "./mainPage.scss";
 
 export const MainPage = () => {
+  const mainClass = "main-page";
   return (
     <>
       <Router>
-        <div>
+        <div className={mainClass}>
           <Navigation />
           <Switch>
             <Route exact path="/about">

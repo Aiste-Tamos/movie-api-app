@@ -1,0 +1,26 @@
+.navigation {
+    margin: 0;
+    padding: 20px;
+
+    &__list {
+        display: flex;
+        margin: 0;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .navigation {
+        width: 30%;
+
+        &__list {
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            flex-direction: column;
+        }
+    }
+}

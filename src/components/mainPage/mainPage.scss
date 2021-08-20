@@ -1,0 +1,11 @@
+.main-page {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+@media screen and (min-width: 600px){
+    .main-page {
+        flex-direction: row;
+    }
+}

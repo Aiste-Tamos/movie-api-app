@@ -8,6 +8,8 @@ export const FilmsPage = () => {
   const [people, setPeople] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const mainClass = "films-page";
+
   useEffect(() => {
     async function fetchFilms() {
       let res = await fetch("https://swapi.dev/api/films");
@@ -20,11 +22,20 @@ export const FilmsPage = () => {
       let data = await res.json();
       setPeople(data.results);
     }
-
     fetchFilms();
     fetchPeople();
     setLoading(false);
   }, []);
 
-  return <div>{loading ? <p>Loading...</p> : <FilmsList films={films} />}</div>;
+  return (
+    <div className={mainClass}>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <>
+          <FilmsList films={films} people={people} />
+        </>
+      )}
+    </div>
+  );
 };

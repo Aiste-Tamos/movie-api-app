@@ -3,8 +3,9 @@ import React from "react";
 import "./aboutPage.scss";
 
 export const AboutPage = () => {
+  const mainClass = "about-page";
   return (
-    <div>
+    <div className={mainClass}>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque repellat
         doloremque, deserunt, non dignissimos qui placeat veniam libero adipisci

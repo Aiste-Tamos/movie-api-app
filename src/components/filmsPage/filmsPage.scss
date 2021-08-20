@@ -1,0 +1,10 @@
+.films-page {
+    overflow-x: auto;
+    width: 100%;
+}
+
+@media screen and (min-width: 600px){
+    .films-page {
+        width: 70%;
+    }
+}
