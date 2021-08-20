@@ -3,12 +3,21 @@ import React from "react";
 import "./people.scss";
 
 export const People = ({ film, people }) => {
+  const mainClass = "people";
+  const titleClass = `${mainClass}__title`;
+  const tableClass = `${mainClass}__table`;
+
   return (
-    <div>
-      <table>
+    <div className={mainClass}>
+      <table className={tableClass}>
+        <caption className={titleClass}>People in {film.title}</caption>
         <thead>
           <tr>
-            <th>People in {film.title}</th>
+            <th></th>
+            <th>Name</th>
+            <th>Birth year</th>
+            <th>Gender</th>
+            <th>Mass</th>
           </tr>
         </thead>
         <tbody>

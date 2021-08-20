@@ -1,3 +1,15 @@
 .about-page {
-    padding: 20px;
+    background: transparentize(white, 0.4);
+    border-radius: 10px;
+    height: 100%;
+    margin: 25px;
+    padding: 15px;
+}
+
+@supports(backdrop-filter: none){
+    .about-page {
+        background: transparentize(white, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
 }
