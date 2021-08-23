@@ -6,6 +6,7 @@ export const AboutPage = () => {
   const mainClass = "about-page";
   return (
     <div className={mainClass}>
+      <h1>About</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque repellat
         doloremque, deserunt, non dignissimos qui placeat veniam libero adipisci

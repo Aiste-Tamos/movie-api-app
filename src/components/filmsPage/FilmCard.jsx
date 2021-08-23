@@ -30,6 +30,7 @@ export const FilmCard = ({ film }) => {
           .then((data) => {
             setLoading(true);
             people.push(data);
+            people.sort((a, b) => a.url.split("/")[5] - b.url.split("/")[5]);
             setPeople(people);
             setLoading(false);
           });

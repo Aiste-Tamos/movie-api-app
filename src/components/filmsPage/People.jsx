@@ -10,7 +10,7 @@ export const People = ({ film, people }) => {
   return (
     <div className={mainClass}>
       <table className={tableClass}>
-        <caption className={titleClass}>People in {film.title}</caption>
+        <caption className={titleClass}>People in {film.title}:</caption>
         <thead>
           <tr>
             <th></th>

@@ -15,13 +15,46 @@
     }
 }
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 768px){
     .navigation {
-        width: 30%;
+        background: transparentize(white, 0.5);
+        border: 1px solid transparentize(white, 0.5);
+        width: 90px;
 
         &__list {
-            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
             flex-direction: column;
+        }
+
+        &__link {
+            margin-bottom: 25px;
+            position: relative;
+            transition: .2s all;
+            width: 100%;
+
+            &:hover {
+                color: rgb(0, 0, 0);
+            }
+
+            &:active {
+                transform: translateY(1px);
+            }
+        }
+
+        &__link::after {
+            color: rgba(255, 255, 255, 0.7);
+            content: "\25B7";
+            position: absolute;
+            right: 0;
+        }
+        
+    }
+    
+    @supports(backdrop-filter: none){
+        .navigation {
+                background: transparentize(white, 0.8);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
         }
     }
 }
+    
