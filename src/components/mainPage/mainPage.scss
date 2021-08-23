@@ -8,6 +8,11 @@
     min-height: 100vh;
     width: 100vw;
 
+    &__title {
+        font-size: 28px;
+        text-align: center;
+    }
+
     &__footer {
         color: rgb(194, 194, 194);
         font-size: 14px;

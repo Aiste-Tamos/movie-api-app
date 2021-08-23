@@ -10,6 +10,7 @@ import "./mainPage.scss";
 
 export const MainPage = () => {
   const mainClass = "main-page";
+  const titleClass = `${mainClass}__title`;
   const footerClass = `${mainClass}__footer`;
 
   return (
@@ -18,6 +19,9 @@ export const MainPage = () => {
         <div className={mainClass}>
           <Navigation />
           <Switch>
+            <Route exact path="/">
+              <h1 className={titleClass}>Star Wars Movies information page</h1>
+            </Route>
             <Route exact path="/about">
               <AboutPage />
             </Route>
